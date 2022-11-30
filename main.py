@@ -11,12 +11,12 @@ def format_data(account):
   return f"{acc_name}, {acc_description}, from {acc_country}."
   
 def compare(acc1, acc2):
-  guess = input("Who has more followers? Type 'A' or 'B': ")
+  guess = input("Who has more followers? Type 'A' or 'B': ").lower()
   count1 = acc1["follower_count"]
   count2 = acc2["follower_count"]
-  if count1 > count2 and guess == 'A':
+  if count1 > count2 and guess == 'a':
     return True
-  elif count1 < count2 and guess == 'B':
+  elif count1 < count2 and guess == 'b':
     return True
   else:
     return False
